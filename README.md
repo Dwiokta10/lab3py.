@@ -126,7 +126,7 @@ def atm():
 atm()
 ```
 # Output Program
-![Flowchart](
+![Flowchart](https://github.com/Dwiokta10/lab3py./blob/main/output3.png)
 # Cara Kerja Program
 1. Inisialisasi Saldo:
 - Program dimulai dengan saldo awal sebesar Rp 1.000.000.
