@@ -73,7 +73,76 @@ for bulan in range(1, 9):
 
 print(f"Total laba adalah: {total_laba}")
 ```
+# Output Program
+![Flowchart](https://github.com/Dwiokta10/lab3py./blob/main/output2.png)
 
+# Cara Kerja Program
+1. Input dan inisialisasi:
+- Nilai modal awal Rp100.000.000 diatur dalam variabel modal_awal.
+- Variabel total_laba disiapkan untuk menghitung akumulasi laba.
+2. Proses perulangan:
+- Setiap bulan dihitung laba sesuai dengan ketentuan.
+- Untuk bulan pertama dan kedua, laba 0.
+- Mulai bulan ketiga, laba dihitung dengan persentase yang sesuai.
+- Laba ditambahkan ke total_laba setiap iterasi.
+3. Output:
+- Laba per bulan ditampilkan langsung.
+- Setelah perulangan selesai, total laba yang dikumpulkan selama 8 bulan dicetak.
 
+# Program 3
+Membuat ATM sederhana 
+# Deskripsi Program
+Program ini dibuat menggunakan bahasa python dengan fitur:
+while True,if,int(input, except ValueError,break,else
+# Kode Program
+```python
+def atm():
+    saldo = 1000000  # Initial balance
+    while True:
+        print(f"Saldo saat ini: Rp {saldo}")
+        print("1. Tarik Uang")
+        print("2. Keluar")
+        
+        pilihan = input("Pilih menu (1/2): ")
+        
+        if pilihan == '1':
+            try:
+                jumlah_penarikan = int(input("Masukkan jumlah penarikan: "))
+                if jumlah_penarikan <= saldo:
+                    saldo -= jumlah_penarikan
+                    print("Penarikan berhasil!")
+                else:
+                    print("Saldo tidak mencukupi.")
+            except ValueError:
+                print("Input tidak valid. Masukkan angka.")
+        elif pilihan == '2':
+            print("Terima kasih telah menggunakan ATM!")
+            break
+        else:
+            print("Pilihan tidak valid. Coba lagi.")
+        print()
 
-
+# Run the ATM function
+atm()
+```
+# Output Program
+![Flowchart](
+# Cara Kerja Program
+1. Inisialisasi Saldo:
+- Program dimulai dengan saldo awal sebesar Rp 1.000.000.
+2. Tampilan Menu:
+- Program terus menampilkan saldo dan dua pilihan menu (Tarik Uang atau Keluar) selama loop berjalan.
+3. Pilihan Menu:
+- Jika pengguna memilih 1, mereka diminta untuk memasukkan jumlah penarikan:
+         - Jika jumlah penarikan lebih kecil atau sama 
+           dengan saldo, saldo dikurangi dengan jumlah 
+           tersebut, dan transaksi berhasil.
+         -Jika jumlah penarikan lebih besar dari saldo, 
+           pengguna mendapatkan pesan bahwa saldo tidak 
+           mencukupi.
+- Jika pengguna memilih 2, program keluar dari loop dan mencetak pesan penutup.
+- Jika input tidak valid (bukan angka atau pilihan lain selain 1 dan 2), program mencetak pesan error.
+4. Cek Kesalahan Input:
+- Program menangani kesalahan input angka menggunakan try-except untuk menghindari error akibat masukan tidak valid.
+5. Berhenti:
+- Program berhenti jika pengguna memilih menu "Keluar". dengan menampilkan pesan "Terima kasih telah menggunakan ATM"
